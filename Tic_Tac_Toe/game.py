@@ -1,4 +1,4 @@
-from player import HumanPlayer, RandomComputerPlayer
+from player import HumanPlayer, RandomComputerPlayer, GeniusComputerPlayer
 import random
 import time
 
@@ -61,7 +61,7 @@ class TicTacToe:
     def make_move(self, square, letter):
         # if valid move, then make the move, otherwise, return false
         if self.board[square] == ' ':
-            self.board[square]= letter  
+            self.board[square] = letter  
             if self.winner(square, letter): # if this is true
                 self.current_winner = letter
             return True
@@ -111,7 +111,7 @@ def play(game, x_player, o_player, print_game=True): # print_game here means to 
 # start the game
 if __name__ == '__main__':
     x_player = HumanPlayer('X')
-    o_player = RandomComputerPlayer('Y')
+    o_player = GeniusComputerPlayer('Y')
     play(TicTacToe(), x_player, o_player, print_game=True)
     
 
