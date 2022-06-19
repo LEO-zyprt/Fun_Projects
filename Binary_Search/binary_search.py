@@ -55,7 +55,7 @@ if __name__ == '__main__':
     for target in sorted_list:
         binary_search(sorted_list, target)
     end_time = time.time()
-    print('Navie Search Time', (end_time - start_time)/length)
+    print('Binary Search Time', (end_time - start_time)/length)
 
 
 
